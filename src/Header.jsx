@@ -6,7 +6,7 @@ function Header() {
     const navigate = useNavigate();
 
     const onClickLogin = () => {
-        navigate('/login');
+        navigate('/handleRegister');
     }
     
     return (

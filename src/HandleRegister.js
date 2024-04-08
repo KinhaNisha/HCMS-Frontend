@@ -9,14 +9,12 @@ const RoleSelection = () => {
     setSelectedOption(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Navigate based on the selected option
-    if (selectedOption === 'option1') {
+  const handleSubmit = (selectedOption) => {
+    if (selectedOption === 'Patient') {
       navigate('/patientLogin');
-    } else if (selectedOption === 'option2') {
+    } else if (selectedOption === 'Doctor') {
       navigate('/doctorLogin');
-    } else if (selectedOption === 'option3') {
+    } else if (selectedOption === 'Admin') {
       navigate('/adminLogin');
     }
   };
@@ -26,7 +24,6 @@ const RoleSelection = () => {
       <div className='form-container'>
         <div className='input-container'>
           <select className='role' value={selectedOption} onChange={handleOptionChange}>
-            {/* <option value="" disabled>Select Role</option> */}
             <option value="patient" selected>Patient</option>
             <option value="doctor">Doctor</option>
             <option value="admin">Admin</option>
