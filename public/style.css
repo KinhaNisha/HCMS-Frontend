@@ -33,6 +33,10 @@ body {
   gap: 20px;
 }
 
+.input-container {
+  width: 100%;
+  max-width: 600px;
+}
 .input-container button {
   width: 100%;
 }
@@ -195,3 +199,70 @@ button:hover {
   }
 }
 
+
+
+/* media query */
+
+/* For devices up to 767px width (typically smartphones) */
+@media (max-width: 767px) {
+  .form-container {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .input-container button {
+    width: 100%; /* Make buttons full-width */
+  }
+
+  .header {
+    flex-direction: column; /* Stack header items vertically */
+    height: auto; /* Adjust header height */
+  }
+
+  .logo-box, .login-box {
+    width: 100%; /* Make logo box and login box full-width */
+    justify-content: center; /* Center align logo and login link */
+    margin-bottom: 10px; /* Add some space between logo and login */
+  }
+
+  #logo {
+    width: 100px; /* Adjust logo size */
+    height: 100px; /* Adjust logo size */
+  }
+
+  #logoname {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  #login {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    padding: 8px 15px; /* Adjust padding for login button */
+  }
+
+  .content-box {
+    width: 90%; /* Adjust width for smaller screens */
+    height: auto; /* Adjust height to fit content */
+    margin: 10px auto; /* Center content box */
+  }
+
+  .content-box p {
+    margin: 5% 5%; /* Adjust margin for smaller screens */
+  }
+}
+
+/* For devices up to 600px width */
+@media (max-width: 600px) {
+  .form-heading {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* For devices up to 300px width */
+@media (max-width: 300px) {
+  #logoname {
+    font-size: 1rem; /* Adjust font size for very small screens */
+  }
+
+  #login {
+    font-size: 1.5rem; /* Adjust font size for very small screens */
+  }
+}

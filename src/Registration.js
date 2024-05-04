@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Input, message } from "antd";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import Header from "./Header";
 const Register = () => {
   const navigate = useNavigate();
 
@@ -22,6 +23,7 @@ const Register = () => {
   };
   return (
     <>
+    <Header />
       <Form
         layout="vertical"
         onFinish={onfinishHandler}

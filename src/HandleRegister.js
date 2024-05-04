@@ -1,37 +1,47 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Assuming you're using React Router
+import { useNavigate } from 'react-router';
+import Header from './Header';
 
 const RoleSelection = () => {
-  const [selectedOption, setSelectedOption] = useState('');
+  const [selectedOption, setSelectedOption] = useState('patient'); 
   const navigate = useNavigate();
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
 
-  const handleSubmit = (selectedOption) => {
-    if (selectedOption === 'Patient') {
-      navigate('/patientLogin');
-    } else if (selectedOption === 'Doctor') {
-      navigate('/doctorLogin');
-    } else if (selectedOption === 'Admin') {
-      navigate('/adminLogin');
+  const handleSubmit = (event) => { 
+    event.preventDefault(); 
+    let role = ''; 
+
+    if (selectedOption === 'patient') {
+      role = "Patient";
+    } else if (selectedOption === 'doctor') {
+      role = "Doctor";
+    } else if (selectedOption === 'admin') {
+      role = "Admin";
     }
+
+    localStorage.setItem('role', role);
+    navigate('/login');
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className='form-container'>
-        <div className='input-container'>
-          <select className='role' value={selectedOption} onChange={handleOptionChange}>
-            <option value="patient" selected>Patient</option>
-            <option value="doctor">Doctor</option>
-            <option value="admin">Admin</option>
-          </select>
-          <button type="submit" onClick={handleSubmit}>Submit</button>
+    <>
+      <Header />
+      <form onSubmit={handleSubmit}>
+        <div className='form-container'>
+          <div className='input-container'>
+            <select className='role' value={selectedOption} onChange={handleOptionChange}>
+              <option value="patient">Patient</option>
+              <option value="doctor">Doctor</option>
+              <option value="admin">Admin</option>
+            </select>
+            <button type="submit">Submit</button>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </>
   );
 };
 
