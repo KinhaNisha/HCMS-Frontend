@@ -8,7 +8,7 @@ import AyurvedImage from "./images/ayurved-logo.png"
 function HomePage() {
     const navigate = useNavigate();
     const onClickAppointment = () => {
-        navigate("/appointments")
+        navigate("/ChooseSpeciality")
     }
 
     return (

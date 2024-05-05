@@ -266,3 +266,128 @@ button:hover {
     font-size: 1.5rem; /* Adjust font size for very small screens */
   }
 }
+
+
+
+
+/* Choose Speciality css */
+/* styles.css */
+
+/* App Container */
+.app-container {
+  width: 40vw;
+  height: 100vh;
+  margin: 30%;
+  margin-top: 0;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(52, 49, 49, 0.2);
+  border: 1px solid rgb(216, 208, 208);
+}
+
+/* Top Box */
+.top-box {
+  position: fixed;
+  top: 0;
+  width: 40vw;
+  height: 50px;
+  text-align: center;
+  font-weight: 600;
+  background-color: #3c7df0;
+  padding-bottom: 16px;
+}
+
+.title {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* Specialities Container */
+.specialities-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  background-color: #fff;
+}
+
+.specialities-wrapper {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+/* Speciality Card */
+.speciality-card {
+  width: 10rem;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tick {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tick-image {
+  margin-right: 8px;
+  margin-top: 4px;
+  margin-right: .5rem;
+  height: .75rem;
+  margin-top: .25rem;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.speciality-image {
+  height: 64px;
+}
+
+.speciality-title {
+  font-size: 14px;
+  text-align: center;
+  height: 36px;
+  padding: 4px 0;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 40%;
+  height: 50px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.confirm-button {
+  width: 100%;
+  height: 100%;
+  background-color: #3c7df0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+  background-color: #2b5aa4;
+}
+
+

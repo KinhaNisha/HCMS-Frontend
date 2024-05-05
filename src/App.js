@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import Login from './Login';
 import Registration from './Registration';
 import RoleSelection from './HandleRegister';
+import Speciality from './admin/Speciality';
 
 
 
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/handleRegister" element={<RoleSelection />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/registration" element={<Registration />} />
+          <Route exact path="/chooseSpeciality" element={<Speciality />} />
         </Routes>
       </Router>
     </>
