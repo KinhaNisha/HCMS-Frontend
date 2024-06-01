@@ -81,7 +81,7 @@ const MenuButton = () => {
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
             <li style={menuItemStyle}>Menu :</li>
             <li><a style={menuItemStyle} href='/'>Home Page</a></li>
-            <li><a style={menuItemStyle} href='/getAppointment'>Book Appointment</a></li>
+            <li><a style={menuItemStyle} href='/myAppointment'>My Appointment</a></li>
             <li><a style={menuItemStyle} href='/history'>My History</a></li>
             <li><a style={menuItemStyle} href='/reports'>Reports</a></li>
           </ul>
