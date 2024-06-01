@@ -1,13 +1,9 @@
 import React, { useState} from 'react';
 
 const menuButtonStyle = {
-  // backgroundColor: 'yellow',
-  // color: 'black',
-  // border: 'none',
-  // cursor: 'pointer',
+  cursor: 'pointer',
   fontSize: '24px',
   marginRight: '12px',
-  // width: '50px',
 };
 
 const menuContentStyle = {
@@ -85,9 +81,9 @@ const MenuButton = () => {
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
             <li style={menuItemStyle}>Menu :</li>
             <li><a style={menuItemStyle} href='/'>Home Page</a></li>
-            <li><a style={menuItemStyle} href='/AdminLogin'>Admin Login</a></li>
-            <li><a style={menuItemStyle} href='/doctorLogin'>Doctor Login</a></li>
-            <li><a style={menuItemStyle} href='/patientLogin'>Patient Login</a></li>
+            <li><a style={menuItemStyle} href='/getAppointment'>Book Appointment</a></li>
+            <li><a style={menuItemStyle} href='/history'>My History</a></li>
+            <li><a style={menuItemStyle} href='/reports'>Reports</a></li>
           </ul>
         </div>
       )}
