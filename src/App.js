@@ -4,7 +4,7 @@ import HomePage from './HomePage';
 import Login from './Login';
 import Registration from './Registration';
 import RoleSelection from './HandleRegister';
-import Speciality from './admin/Speciality';
+import Speciality from './admin/ChooseSpeciality';
 
 
 
