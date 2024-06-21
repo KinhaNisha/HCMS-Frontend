@@ -9,7 +9,7 @@ const Register = () => {
 
   const onFinishHandler = async (values) => {
     try {
-      const res = await axios.post("/api/v1/users/register", { values });
+      const res = await axios.post("http://localhost:8080/api/v1/users/register", values);
       if (res.data.success) {
         message.success("Registered Successfully!");
         navigate("/login");
@@ -17,9 +17,12 @@ const Register = () => {
         message.error(res.data.message);
       }
     } catch (error) {
-      console.error(error);
-      message.error("Something Went Wrong");
-    }
+      if (error.response && error.response.data.error) {
+          message.error(error.response.data.error);
+      } else {
+          message.error("Something Went Wrong");
+      }
+  }
   };
 
   const validateConfirmPassword = ({ getFieldValue }) => ({
@@ -40,7 +43,7 @@ const Register = () => {
             <h3 className="form-heading">Register Form</h3>
             <div className="join-item">
               <div className="form-item">
-                <Form.Item label="Name" name="Name" rules={[{ required: true, message: 'Please input your name!' }]}>
+                <Form.Item label="Name" name="name" rules={[{ required: true, message: 'Please input your name!' }]}>
                   <Input type="text" />
                 </Form.Item>
               </div>

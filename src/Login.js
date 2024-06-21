@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Input, message} from "antd";
+import { Form, Input, message, Select} from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Header from "./Header";
@@ -7,17 +7,11 @@ import Header from "./Header";
 
 const Login = () => {
   const navigate = useNavigate();
-  const role = localStorage.getItem("role");
-  console.log("MY ROLE: ", role)
-  //form handler
+
   const onFinishHandler = async (values) => {
-    // Append role to the form data
-    values.role = role;
-    console.log(values);
-    alert('login successful')
-    navigate('/')
+    
     try {
-      const res = await axios.post("/api/v1/user/login", values);
+      const res = await axios.post("http://localhost:8080/api/v1/users/login", values);
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
         message.success("Login Successfully");
@@ -27,7 +21,7 @@ const Login = () => {
       }
     } catch (error) {
       console.log(error);
-      message.error("something went wrong");
+      message.error("Invalid credientiels, Please check credientials or register if new user!");
     }
   };
   return (
@@ -37,6 +31,14 @@ const Login = () => {
         <div className="form-container">
           <div className="input-container">
             <h3 className="form-heading">Login Form</h3>
+            <div className="form-item">
+                <Form.Item label="Role" name="role" rules={[{ required: true, message: 'Please select your role!' }]}>
+                  <Select placeholder="Select your role">
+                  <Select.Option value="patient">Patient</Select.Option>
+                  <Select.Option value="doctor">Doctor</Select.Option>
+                  </Select>
+                </Form.Item>
+              </div>
             <Form.Item label="Email" name="email" rules={[{ required: true, message: 'Please input your email!' }]}>
               <Input type="email" />
             </Form.Item>
