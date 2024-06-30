@@ -2,8 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router";
 import Header from "./Header";
 import Footer from "./Footer";
-import LogoUrl from "./images/logo.png";
-import AyurvedImage from "./images/ayurved-logo.png"
+import LogoUrl from "../images/logo.png";
+import AyurvedImage from "../images/ayurved-logo.png"
 
 function HomePage() {
     const navigate = useNavigate();

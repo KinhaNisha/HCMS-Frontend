@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Input, message, Select } from "antd";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import Header from "./Header";
+import Header from "../pages/Header";
 
 const Register = () => {
   const navigate = useNavigate();

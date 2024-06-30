@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Input, message, Select} from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Header from "./Header";
+import Header from "../pages/Header";
 
 
 const Login = () => {
